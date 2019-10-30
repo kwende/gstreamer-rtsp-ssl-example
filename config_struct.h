@@ -23,6 +23,7 @@ struct config
 struct config get_config(char *filename)
 {
     struct config rtsp_config;
+	memset(&rtsp_config, 0, sizeof(rtsp_config));
     FILE *file = fopen (filename, "r");
 
     if (file != NULL)
